@@ -3,6 +3,8 @@ using System.Collections.Generic;
 namespace PierreBakery.Models {
 
   public class Bread : Bakery{
+
+   
     public int getTotal () {
       int totalCost = 0;
       totalCost = (AmtBread * Price);
