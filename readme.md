@@ -16,7 +16,7 @@ This is a project to take in order's for Pierre's Bakery and add up the total co
 |**create a instance of a Drink order.** | create a Drink object using drink constructor |drink.getType = Drink|
 | **create a  bread and check for individual price**  |  call Bread variable.Price | Bread.Price returns $5;|
 | **create a pastry object and check for individual price**  |  call Pastry variable.price | Pastry.Price returns $2; |
-**create a drink objeck and check for individual price**  |  call drink variable.price | drink.Price returns $3; |
+**create a drink object and check for individual price**  |  call drink variable.price | drink.Price returns $3; |
 | **test the specials of the day for bread**  |  enter in 3 loafs of bread | returns $10 because of the buy 2 get 1 free offer on the first 3 loafs |
 |**test the specials of the day for Pastries**  |  enter in 3 pastries| returns $5 because of the buy 3 for 5 special
 |**test the total cost for an order that has all pastries and bread and drinks**  |  enter in 3 pastries and 3 bread and 2 drinks | returns $21 because of the buy 3 for 5 special on pastries and buy 2 get 1 free special for bread
