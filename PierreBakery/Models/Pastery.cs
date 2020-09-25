@@ -17,6 +17,10 @@ namespace PierreBakery.Models
     }
     public int Price { get; set; }
     public int AmtPastry { get; set; }
+
+    public Pastry (){
+      {Price = 2;}
+    }
     public Pastry (int amtPastry) {
       AmtPastry = amtPastry;
       Price = 2;

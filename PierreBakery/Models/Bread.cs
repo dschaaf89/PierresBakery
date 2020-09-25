@@ -18,6 +18,10 @@ namespace PierreBakery.Models {
     }
     public int Price { get; set; }
     public int AmtBread { get; set; }
+    
+    public Bread(){
+      Price = 5;
+    }
 
     public Bread (int amtBread) {
       AmtBread = amtBread;
