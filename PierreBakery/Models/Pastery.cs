@@ -4,7 +4,8 @@ namespace PierreBakery.Models
 {
     public class Pastry : Bakery{
 
-  
+  static public Dictionary<int, string> pastryTypes = new Dictionary<int, string> () { { 0, "Croissants" }, { 1, "Apple Strudel" }, { 2, "Cannoli" }, { 3, "Bear Claw" }, { 4, "Cherry Turnover" }
+    };
     
      public int getTotal () {
       int totalCost = 0;

@@ -4,7 +4,9 @@ namespace PierreBakery.Models {
 
   public class Bread : Bakery{
 
-   
+   static public Dictionary<int, string> breadTypes = new Dictionary<int, string> () { { 0, "Ciabatta" }, { 1, "French" }, { 2, "Sourdough" }, { 3, "Wheat" }, { 4, "Rye" }
+    };
+
     public int getTotal () {
       int totalCost = 0;
       totalCost = (AmtBread * Price);
