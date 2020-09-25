@@ -9,6 +9,10 @@ namespace PierreBakery.Models {
       if (AmtBread == 3) {
         totalCost = 10;
       }
+      else if( AmtBread % 3 == 0){
+        int subtract = (AmtBread/3)*Price;
+        totalCost -= subtract;
+      }
       
       return totalCost;
     }
@@ -29,7 +33,10 @@ namespace PierreBakery.Models {
       int totalCost = 0;
       totalCost = (AmtPastry * Price);
       if (AmtPastry == 3) {
-        totalCost --;
+        totalCost= 5;
+      }else if( AmtPastry % 3 == 0){
+        totalCost = (AmtPastry/3)*5;
+       
       }
       
       return totalCost;

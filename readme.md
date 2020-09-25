@@ -51,7 +51,7 @@ _if you have questions please email Daniel Schaaf @ daniel.schaaf@outlook.com _
 
 ## Technologies Used
 
-_This project used C# and .Net technolgoy and language._
+_This project used C# and .Net technology and language._
 
 ### License
 
