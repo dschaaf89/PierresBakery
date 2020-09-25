@@ -27,5 +27,11 @@ namespace PierreBakery.Tests
       Bread newBread = new Bread ();
       Assert.AreEqual(5,newBread.Price);
     }
+    [TestMethod]
+    public void GetPastryPrice_returnGetPrice_int () 
+    {
+      Pastry newPastry = new Pastry ();
+      Assert.AreEqual(5,newPastry.Price);
+    }
   }
 }
