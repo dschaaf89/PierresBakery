@@ -31,7 +31,7 @@ namespace PierreBakery.Tests
     public void GetPastryPrice_returnGetPrice_int () 
     {
       Pastry newPastry = new Pastry ();
-      Assert.AreEqual(5,newPastry.Price);
+      Assert.AreEqual(2,newPastry.Price);
     }
   }
 }
