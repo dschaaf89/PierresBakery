@@ -9,6 +9,7 @@ namespace PierreBakery.Models {
       if (AmtBread == 3) {
         totalCost = 10;
       }
+      
       return totalCost;
     }
     public int Price { get; set; }
@@ -24,7 +25,9 @@ namespace PierreBakery.Models {
 
   public class Pastry {
     public int Price { get; set; }
-    public Pastry () {
+    public int AmtPastry { get; set; }
+    public Pastry (int amtPastry) {
+      AmtPastry = amtPastry;
       Price = 2;
     }
   }
