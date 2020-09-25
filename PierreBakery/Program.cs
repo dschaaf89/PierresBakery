@@ -8,10 +8,30 @@ namespace PierreBakery {
       Console.WriteLine ("Welcome to Pierres Bakery. Home to the best Breads and Pastry's in the NorthWest");
       Console.WriteLine ("We have two specials going on today. Our first Special is on Bread if you buy 2 bread you get the 3rd bread free. this is only on the first three loafs though");
       Console.WriteLine ("Our second Special is for our pastries. we have a buy 1 pastry for $2 and 3 for $5 dollars");
-      Console.WriteLine ("What would you like to order today. write bread,pastry, or both. any other word will close the order process");
+      Console.WriteLine ("What would you like to order today. write drink,bread,pastry, or all. any other word will close the order process");
 
       string answer = Console.ReadLine ();
-      if (answer.ToLower () == "bread") {
+      if(answer.ToLower() == "drink")
+      {
+        Console.WriteLine ("what type of Drinks do you want to buy? choose the number");
+        for (int i = 0; i < Drinks.drinkTypes.Count; i++) {
+          string num = i.ToString ();
+          Console.WriteLine (num + " , " + Drinks.drinkTypes[i]);
+        }
+        int number = int.Parse (Console.ReadLine ());
+
+      Console.WriteLine ("How many loafs of " + Drinks.drinkTypes[number] + " would you like to buy");
+        int amtDrink = int.Parse (Console.ReadLine ());
+        Drinks orderDrink = new Drinks (amtDrink);
+        int TotalCost = orderDrink.getTotal ();
+        Console.WriteLine ("Your order Totals to $" + TotalCost + " for your order of " + amtDrink + " " + Drinks.drinkTypes[number] + " drinks");
+
+
+
+
+
+      }
+      else if (answer.ToLower () == "bread") {
         Console.WriteLine ("what type of bread do you want to buy? choose the number");
         for (int i = 0; i < Bread.breadTypes.Count; i++) {
           string num = i.ToString ();
@@ -41,7 +61,21 @@ namespace PierreBakery {
         Console.WriteLine ("Your order Totals to $" + TotalCost + " for your order of " + amtPastry + " " + Pastry.pastryTypes[number] + " pastries");
 
 
-      } else if (answer.ToLower () == "both") {
+      } else if (answer.ToLower () == "all") {
+
+ Console.WriteLine ("what type of Drinks do you want to buy? choose the number");
+        for (int i = 0; i < Drinks.drinkTypes.Count; i++) {
+          string num = i.ToString ();
+          Console.WriteLine (num + " , " + Drinks.drinkTypes[i]);
+        }
+        int number3 = int.Parse (Console.ReadLine ());
+
+      Console.WriteLine ("How many of cups" + Drinks.drinkTypes[number3] + " would you like to buy");
+        int amtDrink = int.Parse (Console.ReadLine ());
+        Drinks orderDrink = new Drinks (amtDrink);
+
+
+
         Console.WriteLine ("what type of bread do you want to buy? choose the number");
         for (int i = 0; i < Bread.breadTypes.Count; i++) {
           string num1 = i.ToString ();
@@ -65,9 +99,10 @@ namespace PierreBakery {
         int amtPastry = int.Parse (Console.ReadLine ());
         Pastry orderPastry = new Pastry (amtPastry);
 
-        int TotalCost = orderBread.getTotal () + orderPastry.getTotal ();
+        int TotalCost = orderBread.getTotal () + orderPastry.getTotal () + orderDrink.getTotal();
 
-        Console.WriteLine ("Your order Totals to $" + TotalCost + " for your order of " + amtBread + " " + Bread.breadTypes[number1] + " bread loafs and " + amtPastry + " " + Pastry.pastryTypes[number2] + " pastries");
+
+        Console.WriteLine ("Your order Totals to $" + TotalCost + " for your order of " + amtBread + " " + Bread.breadTypes[number1] + " bread loafs, " + amtPastry + " " + Pastry.pastryTypes[number2] + " pastries and " + amtDrink+" "+ Drinks.drinkTypes[number3] + " drinks");
 
       } else {
         Console.WriteLine ("Thanks for coming to Pierre's Bakery");
