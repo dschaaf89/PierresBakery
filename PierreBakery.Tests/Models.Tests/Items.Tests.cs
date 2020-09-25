@@ -2,6 +2,7 @@ using System.Reflection;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierreBakery.Models;
+using PierreBakery;
 
 namespace PierreBakery.Tests
 
@@ -45,5 +46,6 @@ namespace PierreBakery.Tests
       Pastry newPastry  = new Pastry(3);
       Assert.AreEqual(5,newPastry.totalPastryCost());
     }
+   
   }
 }
