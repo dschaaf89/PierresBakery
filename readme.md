@@ -11,10 +11,10 @@ This is a project to take in order's for Pierre's Bakery and add up the total co
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **create a instance of a bread order.** | enter 1 for bread |bread.getType = bread|
-| **create a instance of a Pastry order.** | enter 1 for pastry |bread.getType = pastry|
-| **enter in one for bread and check for individual price**  |  enter in 1 | Bread.Price returns $5;|
-| **enter in one for pastry and check for individual price**  |  enter in 1 | Pastry.Price returns $2; |
+| **create a instance of a bread order.** | create a bread object using bread constructor |bread.getType = bread|
+| **create a instance of a Pastry order.** | create a pastry object using pastry object |bread.getType = pastry|
+| **enter in one for bread and check for individual price**  |  call Bread variable.Price | Bread.Price returns $5;|
+| **enter in one for pastry and check for individual price**  |  call Pastry variable.price | Pastry.Price returns $2; |
 | **test the specials of the day for bread**  |  enter in 3 loafs of bread | returns $10 because of the buy 2 get 1 free offer on the first 3 loafs |
 |**test the specials of the day for Pastries**  |  enter in 3 pastries| returns $5 because of the buy 3 for 5 special
 |**test the total cost for an order that has both pastries and bread**  |  enter in 3 pastries and 3 bread| returns $15 because of the buy 3 for 5 special on pastries and buy 2 get 1 free special for bread
