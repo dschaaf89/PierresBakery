@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace PierreBakery.Models {
 
   public class Bread {
-    public int totalCost () {
+    public int totalBreadCost () {
       int totalCost = 0;
       totalCost = (AmtBread * Price);
       if (AmtBread == 3) {
@@ -24,6 +24,16 @@ namespace PierreBakery.Models {
   }
 
   public class Pastry {
+    
+     public int totalPastryCost () {
+      int totalCost = 0;
+      totalCost = (AmtPastry * Price);
+      if (AmtPastry == 3) {
+        totalCost --;
+      }
+      
+      return totalCost;
+    }
     public int Price { get; set; }
     public int AmtPastry { get; set; }
     public Pastry (int amtPastry) {
