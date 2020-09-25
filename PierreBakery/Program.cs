@@ -40,7 +40,7 @@ namespace PierreBakery
 
         int TotalCost = orderBread.getTotal() + orderPastry.getTotal();
 
-        Console.WriteLine("Your order Totals to $"+TotalCost);
+        Console.WriteLine("Your order Totals to $"+TotalCost+ " for your order of "+ amtBread+" bread and "+ amtPastry+" pastries");
         
       }
       else
