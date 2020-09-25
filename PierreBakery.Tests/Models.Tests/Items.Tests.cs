@@ -22,9 +22,10 @@ namespace PierreBakery.Tests
     }
 
     [TestMethod]
-    public void GetBreadPrice_returnPrice_int () 
+    public void GetBreadPrice_returnGetPrice_int () 
     {
-      Assert.AreEqual(5,Bread.price(5));
+      Bread newBread = new Bread ();
+      Assert.AreEqual(5,newBread.Price);
     }
   }
 }
