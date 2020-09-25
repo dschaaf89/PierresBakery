@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 namespace PierreBakery.Models {
 
-  public class Bread {
-    public int totalBreadCost () {
+  public class Bread : Bakery{
+    public int getTotal () {
       int totalCost = 0;
       totalCost = (AmtBread * Price);
       if (AmtBread == 3) {
@@ -27,9 +27,9 @@ namespace PierreBakery.Models {
 
   }
 
-  public class Pastry {
+  public class Pastry : Bakery{
     
-     public int totalPastryCost () {
+     public int getTotal () {
       int totalCost = 0;
       totalCost = (AmtPastry * Price);
       if (AmtPastry == 3) {

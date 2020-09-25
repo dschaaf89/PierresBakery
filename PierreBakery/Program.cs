@@ -17,14 +17,14 @@ namespace PierreBakery
         Console.WriteLine("How many bread loafs would you like to buy");
         int amtBread = int.Parse(Console.ReadLine());
         Bread orderBread = new Bread (amtBread);
-        int TotalCost = orderBread.totalBreadCost();
+        int TotalCost = orderBread.getTotal();
         Console.WriteLine("Your order Totals to $"+TotalCost);
       }
       else if(answer.ToLower() == "pastry"){
         Console.WriteLine("How many pastries would you like to buy");
         int amtPastry = int.Parse(Console.ReadLine());
         Pastry orderPastry = new Pastry (amtPastry);
-        int TotalCost = orderPastry.totalPastryCost();
+        int TotalCost = orderPastry.getTotal();
         Console.WriteLine("Your order Totals to $"+TotalCost);        
       }
      
@@ -38,7 +38,7 @@ namespace PierreBakery
         int amtPastry = int.Parse(Console.ReadLine());
         Pastry orderPastry = new Pastry (amtPastry);
 
-        int TotalCost = orderBread.totalBreadCost() + orderPastry.totalPastryCost();
+        int TotalCost = orderBread.getTotal() + orderPastry.getTotal();
 
         Console.WriteLine("Your order Totals to $"+TotalCost);
         

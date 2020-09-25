@@ -35,16 +35,16 @@ namespace PierreBakery.Tests
       Assert.AreEqual(2,newPastry.Price);
     }
     [TestMethod]
-    public void GetBreadTotal_returnBreadTotalCost_int()
+    public void GetTotal_returnBreadTotalCost_int()
     {
       Bread newBread  = new Bread(4);
-      Assert.AreEqual(20,newBread.totalBreadCost());
+      Assert.AreEqual(20,newBread.getTotal());
     }
     [TestMethod]
-    public void GetPastryTotal_returnPastryTotalCost_int()
+    public void GetTotal_returnPastryTotalCost_int()
     {
       Pastry newPastry  = new Pastry(3);
-      Assert.AreEqual(5,newPastry.totalPastryCost());
+      Assert.AreEqual(5,newPastry.getTotal());
     }
    
   }
