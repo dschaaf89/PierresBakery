@@ -11,7 +11,7 @@ namespace PierreBakery.Tests
 
     [TestMethod]
     public void BreadConstructor_createsInstanceOfBread_Bread () {
-      Bread newBread = new Bread ();
+      Bread newBread = new Bread (1);
       Assert.AreEqual (typeof (Bread), newBread.GetType ());
     }
 
@@ -24,7 +24,7 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void GetBreadPrice_returnGetPrice_int () 
     {
-      Bread newBread = new Bread ();
+      Bread newBread = new Bread (1);
       Assert.AreEqual(5,newBread.Price);
     }
     [TestMethod]
@@ -35,8 +35,8 @@ namespace PierreBakery.Tests
     }
     public void GetBreadTotal_returnBreadTotalCost_int()
     {
-      Bread newBread  = new Bread (3);
-      Assert.AreEqual(10,newBread.GetTotal());
+      Bread newBread  = new Bread(3);
+      Assert.AreEqual(10,newBread.totalCost());
     }
   }
 }
