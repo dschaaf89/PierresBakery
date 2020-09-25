@@ -28,6 +28,7 @@ namespace PierreBakery {
         Console.WriteLine("Ciabatta");
         Console.WriteLine("French");
         Console.WriteLine("Sourdough");
+        Console.WriteLine("Wheat");
         Console.WriteLine("Rye");
         string breadType = Console.ReadLine();
 
@@ -41,16 +42,26 @@ namespace PierreBakery {
 
 
       } else if (answer.ToLower () == "pastry") {
+
+        Console.WriteLine("what type of pastry do you want to buy?");
+        Console.WriteLine("Croissants");
+        Console.WriteLine("Apple Strudel");
+        Console.WriteLine("Cannoli");
+        Console.WriteLine("Bear Claw");
+        Console.WriteLine("Cherry Turnover");
+        string pastryType = Console.ReadLine();
+
         Console.WriteLine ("How many pastries would you like to buy");
         int amtPastry = int.Parse (Console.ReadLine ());
         Pastry orderPastry = new Pastry (amtPastry);
         int TotalCost = orderPastry.getTotal ();
-        Console.WriteLine ("Your order Totals to $" + TotalCost);
+        Console.WriteLine ("Your order Totals to $" + TotalCost + " for your order of " + amtPastry +" "+ pastryType+" pastries" );
       } else if (answer.ToLower () == "both") {
         Console.WriteLine("what type of bread do you want to buy?");
         Console.WriteLine("Ciabatta");
         Console.WriteLine("French");
         Console.WriteLine("Sourdough");
+        Console.WriteLine("Wheat");
         Console.WriteLine("Rye");
         string breadType = Console.ReadLine();
 
@@ -58,13 +69,20 @@ namespace PierreBakery {
         Console.WriteLine ("How many bread loafs would you like to buy");
         int amtBread = int.Parse (Console.ReadLine ());
         Bread orderBread = new Bread (amtBread);
+        Console.WriteLine("what type of pastry do you want to buy?");
+        Console.WriteLine("Croissants");
+        Console.WriteLine("Apple Strudel");
+        Console.WriteLine("Cannoli");
+        Console.WriteLine("Bear Claw");
+        Console.WriteLine("Cherry Turnover");
+        string pastryType = Console.ReadLine();
         Console.WriteLine ("How many pastries would you like to buy");
         int amtPastry = int.Parse (Console.ReadLine ());
         Pastry orderPastry = new Pastry (amtPastry);
 
         int TotalCost = orderBread.getTotal () + orderPastry.getTotal ();
 
-        Console.WriteLine ("Your order Totals to $" + TotalCost + " for your order of " + amtBread + " bread and " + amtPastry + " pastries");
+        Console.WriteLine ("Your order Totals to $" + TotalCost + " for your order of " + amtBread +" "+ breadType+" bread loafs  and " + amtPastry +" "+ pastryType+" pastries");
 
       } else {
         Console.WriteLine ("Thanks for coming to Pierre's Bakery");
