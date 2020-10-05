@@ -7,11 +7,8 @@ namespace PierreBakery.Models
 
     static public Dictionary<int, string> pastryTypes = new Dictionary<int, string>() { { 0, "Croissants" }, { 1, "Apple Strudel" }, { 2, "Cannoli" }, { 3, "Bear Claw" }, { 4, "Cherry Turnover" }
     };
-
-    
     public int Price { get; set; }
     public int AmtPastry { get; set; }
-
     public Pastry()
     {
       { Price = 2; }
@@ -32,9 +29,7 @@ namespace PierreBakery.Models
       else if (AmtPastry % 3 == 0)
       {
         totalCost = (AmtPastry / 3) * 5;
-
       }
-
       return totalCost;
     }
   }
