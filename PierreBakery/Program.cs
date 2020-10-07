@@ -29,11 +29,6 @@ namespace PierreBakery
         Drinks orderDrink = new Drinks(amtDrink);
         int TotalCost = orderDrink.getTotal();
         Console.WriteLine("Your order Totals to $" + TotalCost + " for your order of " + amtDrink + " " + Drinks.drinkTypes[number] + " drinks");
-
-
-
-
-
       }
       else if (answer.ToLower() == "bread")
       {
@@ -68,12 +63,9 @@ namespace PierreBakery
         Pastry orderPastry = new Pastry(amtPastry);
         int TotalCost = orderPastry.getTotal();
         Console.WriteLine("Your order Totals to $" + TotalCost + " for your order of " + amtPastry + " " + Pastry.pastryTypes[number] + " pastries");
-
-
       }
       else if (answer.ToLower() == "all")
       {
-
         Console.WriteLine("what type of Drinks do you want to buy? choose the number");
         for (int i = 0; i < Drinks.drinkTypes.Count; i++)
         {
@@ -85,7 +77,7 @@ namespace PierreBakery
         Console.WriteLine("How many of cups" + Drinks.drinkTypes[number3] + " would you like to buy");
         int amtDrink = int.Parse(Console.ReadLine());
         Drinks orderDrink = new Drinks(amtDrink);
-        
+S
         Console.WriteLine("what type of bread do you want to buy? choose the number");
         for (int i = 0; i < Bread.breadTypes.Count; i++)
         {
@@ -97,7 +89,6 @@ namespace PierreBakery
 
         int amtBread = int.Parse(Console.ReadLine());
         Bread orderBread = new Bread(amtBread);
-
 
         Console.WriteLine("what type of pastry do you want to buy?");
         for (int i = 0; i < Pastry.pastryTypes.Count; i++)
@@ -112,10 +103,7 @@ namespace PierreBakery
         Pastry orderPastry = new Pastry(amtPastry);
 
         int TotalCost = orderBread.getTotal() + orderPastry.getTotal() + orderDrink.getTotal();
-
-
         Console.WriteLine("Your order Totals to $" + TotalCost + " for your order of " + amtBread + " " + Bread.breadTypes[number1] + " bread loafs, " + amtPastry + " " + Pastry.pastryTypes[number2] + " pastries and " + amtDrink + " " + Drinks.drinkTypes[number3] + " drinks");
-
       }
       else
       {
